@@ -18,6 +18,7 @@ class Board extends React.Component {
         value={this.props.squares[i]}
         onClick={() => this.props.onClick(i)} // `this` indicates `renderSquare` because it is in arrow function.
         highlight={this.props.winningSquares.includes(i)}
+        key={"board-row-square-" + i}
       />
     );
   }
@@ -30,7 +31,11 @@ class Board extends React.Component {
       for (let c = 0; c < n; c++) {
         row[c] = this.renderSquare(r * n + c);
       }
-      board[r] = <div className="board-row">{row}</div>;
+      board[r] = (
+        <div className="board-row" key={"board-row-" + r}>
+          {row}
+        </div>
+      );
     }
 
     return <div>{board}</div>;
