@@ -145,9 +145,13 @@ class Game extends React.Component {
   }
 }
 
+export { Game };
+
 // ========================================
 
-ReactDOM.render(<Game />, document.getElementById("root"));
+const container = document.createElement("div");
+document.body.appendChild(container);
+ReactDOM.render(<Game />, container);
 
 function calclateResult(squares) {
   const lines = [
