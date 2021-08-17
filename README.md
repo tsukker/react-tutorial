@@ -71,10 +71,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Reference
 
-[React Official Tutorial](https://ja.reactjs.org/tutorial/tutorial.html)
+- [React Official Tutorial](https://ja.reactjs.org/tutorial/tutorial.html)
+- [Testing Recipes](https://ja.reactjs.org/docs/testing-recipes.html)
 
 Log
 
 ```sh
 npx create-react-app react-tutorial
+
+yarn add --dev jest@26.6.0
+```
+
+Test
+
+```sh
+yarn jest
 ```
